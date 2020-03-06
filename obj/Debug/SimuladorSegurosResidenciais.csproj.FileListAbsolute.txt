@@ -1,0 +1,10 @@
+F:\projeto001\code\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe.config
+F:\projeto001\code\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe
+F:\projeto001\code\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.pdb
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csprojAssemblyReference.cache
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Form1.resources
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Properties.Resources.resources
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.GenerateResource.cache
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.CoreCompileInputs.cache
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.exe
+F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.pdb
