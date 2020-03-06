@@ -71,6 +71,18 @@ namespace SimuladorSegurosResidenciais.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to São Paulo,SP,Bebedouro,0.52
+        ///São Paulo,SP,Barretos,0.46
+        ///Minas Gerais,MG,Belo Horizonte,0.58
+        ///Minas Gerais,MG,Juiz de Fora,0.51.
+        /// </summary>
+        internal static string states {
+            get {
+                return ResourceManager.GetString("states", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon valid_ic {

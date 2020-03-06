@@ -38,10 +38,10 @@
             this.lblGoodsValue = new System.Windows.Forms.Label();
             this.ckbHasAlarme = new System.Windows.Forms.CheckBox();
             this.lblHasAlarm = new System.Windows.Forms.Label();
-            this.cbbState = new System.Windows.Forms.ComboBox();
+            this.cbbStates = new System.Windows.Forms.ComboBox();
             this.lblState = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
-            this.cbbCity = new System.Windows.Forms.ComboBox();
+            this.cbbCities = new System.Windows.Forms.ComboBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -192,13 +192,16 @@
             this.lblHasAlarm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblHasAlarm.Click += new System.EventHandler(this.Label3_Click);
             // 
-            // cbbState
+            // cbbStates
             // 
-            this.cbbState.FormattingEnabled = true;
-            this.cbbState.Location = new System.Drawing.Point(530, 64);
-            this.cbbState.Name = "cbbState";
-            this.cbbState.Size = new System.Drawing.Size(155, 21);
-            this.cbbState.TabIndex = 3;
+            this.cbbStates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbStates.FormattingEnabled = true;
+            this.cbbStates.Location = new System.Drawing.Point(530, 64);
+            this.cbbStates.Name = "cbbStates";
+            this.cbbStates.Size = new System.Drawing.Size(155, 21);
+            this.cbbStates.Sorted = true;
+            this.cbbStates.TabIndex = 3;
+            this.cbbStates.TextChanged += new System.EventHandler(this.cbbState_TextChanged);
             // 
             // lblState
             // 
@@ -228,13 +231,15 @@
             this.lblCity.Text = "Cidade";
             this.lblCity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cbbCity
+            // cbbCities
             // 
-            this.cbbCity.FormattingEnabled = true;
-            this.cbbCity.Location = new System.Drawing.Point(530, 105);
-            this.cbbCity.Name = "cbbCity";
-            this.cbbCity.Size = new System.Drawing.Size(155, 21);
-            this.cbbCity.TabIndex = 4;
+            this.cbbCities.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbCities.FormattingEnabled = true;
+            this.cbbCities.Location = new System.Drawing.Point(530, 105);
+            this.cbbCities.Name = "cbbCities";
+            this.cbbCities.Size = new System.Drawing.Size(155, 21);
+            this.cbbCities.Sorted = true;
+            this.cbbCities.TabIndex = 4;
             // 
             // maskedTextBox3
             // 
@@ -468,11 +473,11 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblCity);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cbbCity);
+            this.panel1.Controls.Add(this.cbbCities);
             this.panel1.Controls.Add(this.lblPropertyValue);
             this.panel1.Controls.Add(this.lblState);
             this.panel1.Controls.Add(this.mktPropertyValue);
-            this.panel1.Controls.Add(this.cbbState);
+            this.panel1.Controls.Add(this.cbbStates);
             this.panel1.Controls.Add(this.lblGoodsValue);
             this.panel1.Controls.Add(this.lblHasAlarm);
             this.panel1.Controls.Add(this.mktGoodsValue);
@@ -758,9 +763,9 @@
         private System.Windows.Forms.MaskedTextBox mktGoodsValue;
         private System.Windows.Forms.Label lblGoodsValue;
         private System.Windows.Forms.MaskedTextBox mktPropertyValue;
-        private System.Windows.Forms.ComboBox cbbState;
+        private System.Windows.Forms.ComboBox cbbStates;
         private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.ComboBox cbbCity;
+        private System.Windows.Forms.ComboBox cbbCities;
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.Label label8;

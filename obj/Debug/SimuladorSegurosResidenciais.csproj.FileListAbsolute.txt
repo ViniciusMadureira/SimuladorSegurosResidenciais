@@ -17,3 +17,4 @@ C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.CoreCompileInputs.cache
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.exe
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.pdb
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csprojAssemblyReference.cache

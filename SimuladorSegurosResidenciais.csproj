@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\LoadStates.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,19 +88,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\valid_ic2.png" />
+    <None Include="Resources\window_ic.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\window_ic.ico" />
+    <None Include="Resources\valid_ic.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\invalid_ic.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\valid_ic2.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\valid_ic.ico" />
+    <None Include="Resources\states.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

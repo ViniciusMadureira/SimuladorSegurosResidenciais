@@ -1,0 +1,4 @@
+São Paulo,SP,Bebedouro,0.52
+São Paulo,SP,Barretos,0.46
+Minas Gerais,MG,Belo Horizonte,0.58
+Minas Gerais,MG,Juiz de Fora,0.51

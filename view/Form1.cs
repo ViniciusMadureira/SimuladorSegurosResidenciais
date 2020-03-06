@@ -1,26 +1,30 @@
 ﻿using Classes;
+using SimuladorSegurosResidenciais.controller;
 using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Eventing;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimuladorSegurosResidenciais
 {
     public partial class Form1 : Form
     {
+        LoadStates loadStates = new LoadStates();
+
         public Form1()
         {
             InitializeComponent();
             epvPropertyValue.SetIconPadding(this.mktPropertyValue, 4);
-            epvGoodsValue.SetIconPadding(this.mktGoodsValue, 4);            
+            epvGoodsValue.SetIconPadding(this.mktGoodsValue, 4);
+            // Fill State Combobox            
+            foreach(var state in loadStates.getStates())
+            {                
+                if (!cbbStates.Items.Contains(state.getName().ToUpper()))
+                {
+                    cbbStates.Items.Add(state.getName().ToUpper());
+                }  
+            }
+            cbbStates.Text = "Selecionar";
+            cbbCities.Enabled = false;
         }
 
         private bool validateMaskedTextBoxCurrency(MaskedTextBox mkt, ErrorProvider epv)
@@ -155,11 +159,46 @@ namespace SimuladorSegurosResidenciais
         {
             bool isValid = validateMaskedTextBoxCurrency(mktPropertyValue, epvPropertyValue)
                 && validateMaskedTextBoxCurrency(mktGoodsValue, epvGoodsValue);
-            // Initialize Model Classes                  
+            // Initialize Model Classes            
             if (isValid)
             {
                 validatePropertyAttributes();
             }            
+        }
+
+        private void loadCbbCities()
+        {
+            cbbCities.Items.Clear();
+            cbbCities.Text = "Selecionar";
+            foreach (var state in loadStates.getStates())
+            {
+                Console.WriteLine(cbbStates.SelectedItem.ToString());
+                if (cbbStates.SelectedItem.ToString() == state.getName().ToUpper())
+                {
+                    foreach (var city in state.getCities())
+                    {
+                        if (!cbbCities.Items.Contains(city.getName().ToUpper()))
+                        {
+                            cbbCities.Items.Add(city.getName().ToUpper());
+                        }
+                    }
+                }
+            }            
+        }
+
+        private void cbbState_TextChanged(object sender, EventArgs e)
+        {
+            if (cbbStates.SelectedIndex < 0)
+            {
+                cbbStates.Text = "Selecionar";
+                cbbCities.Enabled = false;
+            }
+            else
+            {
+                cbbStates.Text = cbbStates.SelectedText;
+                loadCbbCities();
+                cbbCities.Enabled = true;
+            }
         }
     }
 }

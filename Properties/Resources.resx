@@ -121,6 +121,9 @@
   <data name="invalid_ic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invalid_ic.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="states" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\states.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="valid_ic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\valid_ic.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
