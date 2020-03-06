@@ -46,6 +46,11 @@ namespace SimuladorSegurosResidenciais
         {
 
         }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //https://stackoverflow.com/questions/21107782/email-mask-for-maskedtextbox-in-c-sharp

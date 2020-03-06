@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblImovelValor = new System.Windows.Forms.Label();
@@ -60,26 +61,26 @@
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.lblContratoDeSeguroTitle = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.maskedTextBox14 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox15 = new System.Windows.Forms.MaskedTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.maskedTextBox16 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox17 = new System.Windows.Forms.MaskedTextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.maskedTextBox18 = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pnlUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -102,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(195)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(384, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 24);
@@ -160,6 +161,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Location = new System.Drawing.Point(141, 152);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
@@ -276,7 +278,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(195)))));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(379, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 24);
@@ -322,7 +324,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label12.Location = new System.Drawing.Point(89, 182);
+            this.label12.Location = new System.Drawing.Point(96, 182);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 16);
             this.label12.TabIndex = 14;
@@ -444,7 +446,7 @@
             this.pnlUsuario.Controls.Add(this.label6);
             this.pnlUsuario.Controls.Add(this.label12);
             this.pnlUsuario.Controls.Add(this.maskedTextBox6);
-            this.pnlUsuario.Location = new System.Drawing.Point(-5, 251);
+            this.pnlUsuario.Location = new System.Drawing.Point(-5, 240);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(819, 226);
             this.pnlUsuario.TabIndex = 13;
@@ -467,7 +469,7 @@
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Location = new System.Drawing.Point(-5, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 207);
+            this.panel1.Size = new System.Drawing.Size(819, 192);
             this.panel1.TabIndex = 14;
             // 
             // panel2
@@ -476,50 +478,70 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.maskedTextBox11);
+            this.panel2.Controls.Add(this.checkBox3);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.checkBox2);
             this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.lblContratoDeSeguroTitle);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.maskedTextBox12);
             this.panel2.Controls.Add(this.maskedTextBox13);
-            this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.maskedTextBox14);
             this.panel2.Controls.Add(this.maskedTextBox15);
-            this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.maskedTextBox16);
-            this.panel2.Controls.Add(this.maskedTextBox17);
-            this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.maskedTextBox18);
-            this.panel2.Location = new System.Drawing.Point(-5, 473);
+            this.panel2.Location = new System.Drawing.Point(-5, 463);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 316);
+            this.panel2.Size = new System.Drawing.Size(819, 138);
             this.panel2.TabIndex = 24;
-            // 
-            // maskedTextBox11
-            // 
-            this.maskedTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox11.Location = new System.Drawing.Point(529, 213);
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox11.TabIndex = 23;
             // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(195)))));
-            this.label15.Location = new System.Drawing.Point(379, 10);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.label15.Location = new System.Drawing.Point(475, 102);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 24);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Usuário";
+            this.label15.Size = new System.Drawing.Size(54, 16);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Roubo";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label15.Click += new System.EventHandler(this.Label15_Click);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox2.Location = new System.Drawing.Point(536, 104);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 12;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox3.Location = new System.Drawing.Point(663, 104);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 23;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // lblContratoDeSeguroTitle
+            // 
+            this.lblContratoDeSeguroTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContratoDeSeguroTitle.AutoSize = true;
+            this.lblContratoDeSeguroTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblContratoDeSeguroTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContratoDeSeguroTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblContratoDeSeguroTitle.Location = new System.Drawing.Point(323, 5);
+            this.lblContratoDeSeguroTitle.Name = "lblContratoDeSeguroTitle";
+            this.lblContratoDeSeguroTitle.Size = new System.Drawing.Size(192, 24);
+            this.lblContratoDeSeguroTitle.TabIndex = 1;
+            this.lblContratoDeSeguroTitle.Text = "Contrato de Seguro";
+            this.lblContratoDeSeguroTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblContratoDeSeguroTitle.Click += new System.EventHandler(this.Label15_Click);
             // 
             // label16
             // 
@@ -542,20 +564,12 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label17.Location = new System.Drawing.Point(85, 61);
+            this.label17.Location = new System.Drawing.Point(38, 61);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 16);
+            this.label17.Size = new System.Drawing.Size(98, 16);
             this.label17.TabIndex = 2;
-            this.label17.Text = "Nome";
+            this.label17.Text = "Mensalidade";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // maskedTextBox12
-            // 
-            this.maskedTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox12.Location = new System.Drawing.Point(529, 176);
-            this.maskedTextBox12.Name = "maskedTextBox12";
-            this.maskedTextBox12.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox12.TabIndex = 21;
             // 
             // maskedTextBox13
             // 
@@ -564,20 +578,6 @@
             this.maskedTextBox13.Name = "maskedTextBox13";
             this.maskedTextBox13.Size = new System.Drawing.Size(156, 21);
             this.maskedTextBox13.TabIndex = 3;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label18.Location = new System.Drawing.Point(458, 179);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 16);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "Cidade";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label19
             // 
@@ -588,20 +588,10 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
             this.label19.Location = new System.Drawing.Point(64, 102);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 16);
+            this.label19.Size = new System.Drawing.Size(69, 16);
             this.label19.TabIndex = 4;
-            this.label19.Text = "Telefone";
+            this.label19.Text = "Franquia";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // maskedTextBox14
-            // 
-            this.maskedTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox14.Location = new System.Drawing.Point(529, 135);
-            this.maskedTextBox14.Mask = "999999990";
-            this.maskedTextBox14.Name = "maskedTextBox14";
-            this.maskedTextBox14.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox14.TabIndex = 19;
-            this.maskedTextBox14.ValidatingType = typeof(int);
             // 
             // maskedTextBox15
             // 
@@ -612,64 +602,6 @@
             this.maskedTextBox15.Size = new System.Drawing.Size(156, 21);
             this.maskedTextBox15.TabIndex = 5;
             // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label20.Location = new System.Drawing.Point(454, 138);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 16);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Número";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label21.Location = new System.Drawing.Point(82, 140);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(52, 16);
-            this.label21.TabIndex = 12;
-            this.label21.Text = "E-mail";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // maskedTextBox16
-            // 
-            this.maskedTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox16.Location = new System.Drawing.Point(529, 97);
-            this.maskedTextBox16.Name = "maskedTextBox16";
-            this.maskedTextBox16.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox16.TabIndex = 17;
-            // 
-            // maskedTextBox17
-            // 
-            this.maskedTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox17.Location = new System.Drawing.Point(140, 137);
-            this.maskedTextBox17.Name = "maskedTextBox17";
-            this.maskedTextBox17.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox17.TabIndex = 13;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label22.Location = new System.Drawing.Point(428, 100);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 16);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Logradouro";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label23
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -677,34 +609,103 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label23.Location = new System.Drawing.Point(478, 59);
+            this.label23.Location = new System.Drawing.Point(475, 61);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(38, 16);
+            this.label23.Size = new System.Drawing.Size(84, 16);
             this.label23.TabIndex = 14;
-            this.label23.Text = "CEP";
+            this.label23.Text = "Coberturas";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
-            // maskedTextBox18
+            // label18
             // 
-            this.maskedTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox18.Location = new System.Drawing.Point(529, 56);
-            this.maskedTextBox18.Mask = "00000-9999";
-            this.maskedTextBox18.Name = "maskedTextBox18";
-            this.maskedTextBox18.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox18.TabIndex = 15;
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.label18.Location = new System.Drawing.Point(578, 102);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 16);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Desastres";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Location = new System.Drawing.Point(488, 216);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(28, 16);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "UF";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Location = new System.Drawing.Point(-5, 599);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(819, 65);
+            this.panel3.TabIndex = 27;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(595, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 45);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Simular";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(461, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 45);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Limpar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(26, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 45);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Sair";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(808, 723);
+            this.ClientSize = new System.Drawing.Size(808, 665);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "iSegres";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
@@ -712,6 +713,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,23 +754,22 @@
         private System.Windows.Forms.Panel pnlUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblContratoDeSeguroTitle;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox12;
         private System.Windows.Forms.MaskedTextBox maskedTextBox13;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox14;
         private System.Windows.Forms.MaskedTextBox maskedTextBox15;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox17;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox18;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

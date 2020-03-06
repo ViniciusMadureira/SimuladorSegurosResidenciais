@@ -1,0 +1,10 @@
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Release\SimuladorSegurosResidenciais.exe.config
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Release\SimuladorSegurosResidenciais.exe
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Release\SimuladorSegurosResidenciais.pdb
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.csprojAssemblyReference.cache
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.Form1.resources
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.Properties.Resources.resources
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.csproj.GenerateResource.cache
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.csproj.CoreCompileInputs.cache
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.exe
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Release\SimuladorSegurosResidenciais.pdb
