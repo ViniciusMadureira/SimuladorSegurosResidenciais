@@ -2,19 +2,19 @@ namespace Classes
 {
 	public class Cidade
 	{
-		private string nome;
-
-		private double indiceIndividual;
-
-		public double obterIndiceIndividual()
+		private string name;
+		private double individualIndex;		
+		public double getIndividualIndex()
 		{
 			return 0;
 		}
 
-		public Cidade obterCidade()
+		public Cidade getCity()
 		{
 			return null;
 		}
+
+
 
 	}
 

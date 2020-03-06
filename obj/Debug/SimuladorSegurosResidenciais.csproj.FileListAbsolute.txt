@@ -8,13 +8,12 @@ F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosReside
 F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.CoreCompileInputs.cache
 F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.exe
 F:\projeto001\code\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.pdb
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe.config
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe
+C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.pdb
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Form1.resources
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Properties.Resources.resources
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.GenerateResource.cache
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.CoreCompileInputs.cache
-C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe.config
-C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.exe
-C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\SimuladorSegurosResidenciais.pdb
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.exe
 C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.pdb
-C:\Users\psycom\Source\Repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csprojAssemblyReference.cache
