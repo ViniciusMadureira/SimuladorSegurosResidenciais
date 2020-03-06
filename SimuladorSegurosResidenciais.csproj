@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\City.cs" />
+    <Compile Include="model\InsuranceContract.cs" />
+    <Compile Include="model\Address.cs" />
+    <Compile Include="model\State.cs" />
+    <Compile Include="model\Property.cs" />
+    <Compile Include="model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +85,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid_ic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_ic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invalid_ic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid_ic.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

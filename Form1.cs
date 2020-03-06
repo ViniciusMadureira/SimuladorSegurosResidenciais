@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,6 +51,37 @@ namespace SimuladorSegurosResidenciais
         private void label23_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPropertyValue_Validating(object sender, CancelEventArgs e)
+        {            
+        }
+
+        private void txtPropertyValue_Leave(object sender, EventArgs e)
+        {            
+                Double value;
+                tbxPropertyValue.Text = tbxPropertyValue.Text.Replace("R$ ", "");
+                if (Double.TryParse(tbxPropertyValue.Text, out value))
+                {
+                    tbxPropertyValue.Text = String.Format("{0:C2}", value);                    
+                    epvPropertyValue.Icon = Properties.Resources.valid_ic;
+                    epvPropertyValue.SetError(tbxPropertyValue, "Entrada válida!");
+                }
+                else
+                {
+                    Console.WriteLine(tbxPropertyValue.Text);
+                    epvPropertyValue.Icon = Properties.Resources.invalid_ic;
+                    epvPropertyValue.SetError(tbxPropertyValue, "Entrada inválida!");
+                    tbxPropertyValue.Text = String.Empty;
+                }                                  
+        }
+
+        private void txtPropertyValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtPropertyValue_TextChanged(object sender, EventArgs e)
+        {            
         }
     }
 }

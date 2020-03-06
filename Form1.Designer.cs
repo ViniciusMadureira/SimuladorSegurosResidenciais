@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblImovelValor = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tbxPropertyValue = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -61,9 +62,10 @@
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblContratoDeSeguroTitle = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -71,16 +73,17 @@
             this.label19 = new System.Windows.Forms.Label();
             this.maskedTextBox15 = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.epvPropertyValue = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyValue)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -126,14 +129,17 @@
             this.lblImovelValor.Text = "Valor";
             this.lblImovelValor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // maskedTextBox1
+            // tbxPropertyValue
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(141, 64);
-            this.maskedTextBox1.Mask = "R\\$999,999,990.00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(156, 21);
-            this.maskedTextBox1.TabIndex = 3;
+            this.tbxPropertyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPropertyValue.Location = new System.Drawing.Point(141, 64);
+            this.tbxPropertyValue.Name = "tbxPropertyValue";
+            this.tbxPropertyValue.Size = new System.Drawing.Size(156, 21);
+            this.tbxPropertyValue.TabIndex = 3;
+            this.tbxPropertyValue.TextChanged += new System.EventHandler(this.txtPropertyValue_TextChanged);
+            this.tbxPropertyValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPropertyValue_KeyPress);
+            this.tbxPropertyValue.Leave += new System.EventHandler(this.txtPropertyValue_Leave);
+            this.tbxPropertyValue.Validating += new System.ComponentModel.CancelEventHandler(this.txtPropertyValue_Validating);
             // 
             // maskedTextBox2
             // 
@@ -461,7 +467,7 @@
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.lblImovelValor);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.tbxPropertyValue);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -494,6 +500,40 @@
             this.panel2.Size = new System.Drawing.Size(819, 138);
             this.panel2.TabIndex = 24;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox3.Location = new System.Drawing.Point(663, 104);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 23;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.label18.Location = new System.Drawing.Point(578, 102);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 16);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Desastres";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox2.Location = new System.Drawing.Point(536, 104);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 12;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -507,26 +547,6 @@
             this.label15.TabIndex = 25;
             this.label15.Text = "Roubo";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Location = new System.Drawing.Point(536, 104);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Location = new System.Drawing.Point(663, 104);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 23;
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // lblContratoDeSeguroTitle
             // 
@@ -617,20 +637,6 @@
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.label18.Location = new System.Drawing.Point(578, 102);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 16);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Desastres";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label24
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -660,15 +666,15 @@
             this.panel3.Size = new System.Drawing.Size(819, 65);
             this.panel3.TabIndex = 27;
             // 
-            // button1
+            // button3
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(595, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 45);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Simular";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(26, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 45);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Sair";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -680,15 +686,20 @@
             this.button2.Text = "Limpar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(26, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 45);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Sair";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(595, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 45);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Simular";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // epvPropertyValue
+            // 
+            this.epvPropertyValue.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epvPropertyValue.ContainerControl = this;
             // 
             // Form1
             // 
@@ -701,6 +712,7 @@
             this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -715,6 +727,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,7 +742,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbxPropertyValue;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -770,6 +783,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider epvPropertyValue;
     }
 }
 
