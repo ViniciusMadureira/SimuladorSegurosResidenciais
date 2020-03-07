@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimuladorSegurosResidenciais.exe" size="58856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimuladorSegurosResidenciais.exe" size="61928">
       <assemblyIdentity name="SimuladorSegurosResidenciais" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3qehQpqVd4x70DlRoRtg8jc8c4rvbFCGIwMIISyXR4Q=</dsig:DigestValue>
+        <dsig:DigestValue>tX9srnfwagDTkBhMm5Kby7YjDWGIpWmdyygG52DAgxA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

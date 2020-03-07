@@ -15,7 +15,7 @@ namespace Classes
 
 		private void setName(string name)
 		{
-			if (name.Length >= 2)
+			if (name.Length >= 2 && name.Length <= 30)
 			{
 				this.name = name;
 			}

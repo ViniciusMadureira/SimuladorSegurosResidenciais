@@ -26,7 +26,7 @@ namespace SimuladorSegurosResidenciais.controller
                     using (var client = new WebClient())
                     {
                         client.Headers.Add("content-type", "application/json");
-                        string response = client.DownloadString("https://viacep.com.br/ws/" + zipCode + "/json");                        
+                        string response = client.DownloadString("https://viacep.com.br/ws/" + zipCode + "/json/unicode");                        
                         dynamic data = JObject.Parse(response);
                         street = data.logradouro;
                         neighborhood = data.bairro;

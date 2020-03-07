@@ -1,5 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Classes
 {
@@ -8,14 +9,22 @@ namespace Classes
 		private string name;
 		private Int64 phone;
 		private string email;
-		private City city;
+		private string street;
+		private Int64 number;
+		private string neighborhood;
+		private string city;
+		private string stateAcronym;
 
-		public User(string name, Int64 phone, string email, City city)
+		public User(string name, Int64 phone, string email, string street, Int64 number, string neighborhood, string city, string stateAcronym)
 		{
 			setName(name);
 			setPhone(phone);
 			setEmail(email);
+			setStreet(street);
+			setNumber(number);
+			setNeighborhood(neighborhood);
 			setCity(city);
+			setStateAcronym(stateAcronym);
 		}
 
 		protected void setName(string name)
@@ -63,16 +72,68 @@ namespace Classes
 			return email;
 		}
 
-		private void setCity(City city)
+		private void setStreet(string street)
 		{
-			if (city != null)
+			if (street.Length >= 2 && street.Length <= 30)
+			{
+				this.street = street;
+			}
+		}
+
+		public string getStreet()
+		{
+			return street;
+		}
+
+		private void setNumber(Int64 number)
+		{
+			if (number >= 0 && number <= 9999999)
+			{
+				this.number = number;
+			}
+		}
+
+		public Int64 getNumber()
+		{
+			return number;
+		}
+
+		private void setNeighborhood(string neighborhood)
+		{
+			if (neighborhood.Length >= 2 && neighborhood.Length <= 30)
+			{
+				this.neighborhood = neighborhood;
+			}
+		}
+		public string getNeighborhood()
+		{
+			return neighborhood;
+		}
+		
+		private void setCity(string city)
+		{
+			if (city.Length >= 2 && city.Length <= 30)
 			{
 				this.city = city;
 			}
 		}
-		public City getCity()
+
+		public string getCity()
 		{
 			return city;
+		}
+
+		private void setStateAcronym(string stateAcronym)
+		{
+			if (Regex.IsMatch(stateAcronym, @"^[a-zA-Z]{2}$"))
+			{
+				this.stateAcronym = stateAcronym;
+			}
+		}
+
+		public string getStateAcronym()
+		{
+			return stateAcronym;
 		}
 
 	}

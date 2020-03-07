@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitleForm1 = new System.Windows.Forms.Label();
+            this.lblPropertyTitle = new System.Windows.Forms.Label();
             this.lblPropertyValue = new System.Windows.Forms.Label();
             this.mktPropertyValue = new System.Windows.Forms.MaskedTextBox();
-            this.mktGoodsValue = new System.Windows.Forms.MaskedTextBox();
-            this.lblGoodsValue = new System.Windows.Forms.Label();
-            this.ckbHasAlarme = new System.Windows.Forms.CheckBox();
-            this.lblHasAlarm = new System.Windows.Forms.Label();
-            this.cbbStates = new System.Windows.Forms.ComboBox();
-            this.lblState = new System.Windows.Forms.Label();
-            this.lblCity = new System.Windows.Forms.Label();
-            this.cbbCities = new System.Windows.Forms.ComboBox();
+            this.mktPropertyGoodsValue = new System.Windows.Forms.MaskedTextBox();
+            this.lblPropertyGoodsValue = new System.Windows.Forms.Label();
+            this.ckbPropertyHasAlarme = new System.Windows.Forms.CheckBox();
+            this.lblPropertyHasAlarm = new System.Windows.Forms.Label();
+            this.cbbPropertyStates = new System.Windows.Forms.ComboBox();
+            this.lblPropertyStates = new System.Windows.Forms.Label();
+            this.lblPropertyCities = new System.Windows.Forms.Label();
+            this.cbbPropertyCities = new System.Windows.Forms.ComboBox();
             this.mktUserPhone = new System.Windows.Forms.MaskedTextBox();
             this.lblUserPhone = new System.Windows.Forms.Label();
             this.mktUserName = new System.Windows.Forms.MaskedTextBox();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblUserTitle = new System.Windows.Forms.Label();
             this.mktUserEmail = new System.Windows.Forms.MaskedTextBox();
             this.lblUserEmail = new System.Windows.Forms.Label();
             this.mktUserZipCode = new System.Windows.Forms.MaskedTextBox();
@@ -59,29 +59,31 @@
             this.lblUserNeighborhood = new System.Windows.Forms.Label();
             this.mktUserStateAcronym = new System.Windows.Forms.MaskedTextBox();
             this.lblUserStateAcronym = new System.Windows.Forms.Label();
-            this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblContratoDeSeguroTitle = new System.Windows.Forms.Label();
+            this.pnlUser = new System.Windows.Forms.Panel();
+            this.mktUserCity = new System.Windows.Forms.MaskedTextBox();
+            this.lblUserCity = new System.Windows.Forms.Label();
+            this.pnlProperty = new System.Windows.Forms.Panel();
+            this.pnlInsurance = new System.Windows.Forms.Panel();
+            this.ckbInsuranceDisasters = new System.Windows.Forms.CheckBox();
+            this.lblInsuranceDisasters = new System.Windows.Forms.Label();
+            this.ckbInsuranceTheft = new System.Windows.Forms.CheckBox();
+            this.lblInsuranceTheft = new System.Windows.Forms.Label();
+            this.lblInsuranceTitle = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.maskedTextBox15 = new System.Windows.Forms.MaskedTextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblInsuranceMonthlyPay = new System.Windows.Forms.Label();
+            this.mktInsuranceMonthlyPay = new System.Windows.Forms.MaskedTextBox();
+            this.lblInsuranceFranchise = new System.Windows.Forms.Label();
+            this.mktInsuranceFranchise = new System.Windows.Forms.MaskedTextBox();
+            this.lblInsuranceTheftAndDisasters = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSimulate = new System.Windows.Forms.Button();
             this.epvPropertyValue = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epvGoodsValue = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epvStates = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epvCities = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epvPropertyGoodsValue = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epvPropertyStates = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epvPropertyCities = new System.Windows.Forms.ErrorProvider(this.components);
             this.epvUserName = new System.Windows.Forms.ErrorProvider(this.components);
             this.epvUserPhone = new System.Windows.Forms.ErrorProvider(this.components);
             this.epvUserEmail = new System.Windows.Forms.ErrorProvider(this.components);
@@ -90,17 +92,15 @@
             this.epvUserNumber = new System.Windows.Forms.ErrorProvider(this.components);
             this.epvUserCity = new System.Windows.Forms.ErrorProvider(this.components);
             this.epvUserStateAcronym = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mktUserCity = new System.Windows.Forms.MaskedTextBox();
-            this.lblUserCity = new System.Windows.Forms.Label();
             this.epvUserNeighborhood = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pnlUsuario.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlUser.SuspendLayout();
+            this.pnlProperty.SuspendLayout();
+            this.pnlInsurance.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epvPropertyValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvGoodsValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvStates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvCities)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyGoodsValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyStates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyCities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserEmail)).BeginInit();
@@ -112,34 +112,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.epvUserNeighborhood)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // lblTitleForm1
             // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(282, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(274, 29);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Simulador de Seguros";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitleForm1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitleForm1.AutoSize = true;
+            this.lblTitleForm1.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleForm1.ForeColor = System.Drawing.Color.White;
+            this.lblTitleForm1.Location = new System.Drawing.Point(282, 9);
+            this.lblTitleForm1.Name = "lblTitleForm1";
+            this.lblTitleForm1.Size = new System.Drawing.Size(274, 29);
+            this.lblTitleForm1.TabIndex = 0;
+            this.lblTitleForm1.Text = "Simulador de Seguros";
+            this.lblTitleForm1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // lblPropertyTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(384, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Imóvel";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.lblPropertyTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPropertyTitle.AutoSize = true;
+            this.lblPropertyTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropertyTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropertyTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPropertyTitle.Location = new System.Drawing.Point(384, 18);
+            this.lblPropertyTitle.Name = "lblPropertyTitle";
+            this.lblPropertyTitle.Size = new System.Drawing.Size(71, 24);
+            this.lblPropertyTitle.TabIndex = 1;
+            this.lblPropertyTitle.Text = "Imóvel";
+            this.lblPropertyTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPropertyTitle.Click += new System.EventHandler(this.Label1_Click);
             // 
             // lblPropertyValue
             // 
@@ -167,105 +167,105 @@
             this.mktPropertyValue.Leave += new System.EventHandler(this.txtPropertyValue_Leave);
             this.mktPropertyValue.Validating += new System.ComponentModel.CancelEventHandler(this.txtPropertyValue_Validating);
             // 
-            // mktGoodsValue
+            // mktPropertyGoodsValue
             // 
-            this.mktGoodsValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktGoodsValue.Location = new System.Drawing.Point(141, 107);
-            this.mktGoodsValue.Name = "mktGoodsValue";
-            this.mktGoodsValue.Size = new System.Drawing.Size(203, 21);
-            this.mktGoodsValue.TabIndex = 1;
-            this.mktGoodsValue.Leave += new System.EventHandler(this.mktGoodsValue_Leave);
+            this.mktPropertyGoodsValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktPropertyGoodsValue.Location = new System.Drawing.Point(141, 107);
+            this.mktPropertyGoodsValue.Name = "mktPropertyGoodsValue";
+            this.mktPropertyGoodsValue.Size = new System.Drawing.Size(203, 21);
+            this.mktPropertyGoodsValue.TabIndex = 1;
+            this.mktPropertyGoodsValue.Leave += new System.EventHandler(this.mktGoodsValue_Leave);
             // 
-            // lblGoodsValue
+            // lblPropertyGoodsValue
             // 
-            this.lblGoodsValue.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblGoodsValue.AutoSize = true;
-            this.lblGoodsValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblGoodsValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGoodsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.lblGoodsValue.Location = new System.Drawing.Point(23, 110);
-            this.lblGoodsValue.Name = "lblGoodsValue";
-            this.lblGoodsValue.Size = new System.Drawing.Size(114, 16);
-            this.lblGoodsValue.TabIndex = 4;
-            this.lblGoodsValue.Text = "Valor dos Bens";
-            this.lblGoodsValue.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPropertyGoodsValue.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPropertyGoodsValue.AutoSize = true;
+            this.lblPropertyGoodsValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropertyGoodsValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropertyGoodsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblPropertyGoodsValue.Location = new System.Drawing.Point(23, 110);
+            this.lblPropertyGoodsValue.Name = "lblPropertyGoodsValue";
+            this.lblPropertyGoodsValue.Size = new System.Drawing.Size(114, 16);
+            this.lblPropertyGoodsValue.TabIndex = 4;
+            this.lblPropertyGoodsValue.Text = "Valor dos Bens";
+            this.lblPropertyGoodsValue.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckbHasAlarme
+            // ckbPropertyHasAlarme
             // 
-            this.ckbHasAlarme.AutoSize = true;
-            this.ckbHasAlarme.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ckbHasAlarme.Location = new System.Drawing.Point(141, 152);
-            this.ckbHasAlarme.Name = "ckbHasAlarme";
-            this.ckbHasAlarme.Size = new System.Drawing.Size(15, 14);
-            this.ckbHasAlarme.TabIndex = 2;
-            this.ckbHasAlarme.UseVisualStyleBackColor = true;
-            this.ckbHasAlarme.CheckedChanged += new System.EventHandler(this.ckbHasAlarme_CheckedChanged);
+            this.ckbPropertyHasAlarme.AutoSize = true;
+            this.ckbPropertyHasAlarme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckbPropertyHasAlarme.Location = new System.Drawing.Point(141, 152);
+            this.ckbPropertyHasAlarme.Name = "ckbPropertyHasAlarme";
+            this.ckbPropertyHasAlarme.Size = new System.Drawing.Size(15, 14);
+            this.ckbPropertyHasAlarme.TabIndex = 2;
+            this.ckbPropertyHasAlarme.UseVisualStyleBackColor = true;
+            this.ckbPropertyHasAlarme.CheckedChanged += new System.EventHandler(this.ckbHasAlarme_CheckedChanged);
             // 
-            // lblHasAlarm
+            // lblPropertyHasAlarm
             // 
-            this.lblHasAlarm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblHasAlarm.AutoSize = true;
-            this.lblHasAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.lblHasAlarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.lblHasAlarm.Location = new System.Drawing.Point(29, 150);
-            this.lblHasAlarm.Name = "lblHasAlarm";
-            this.lblHasAlarm.Size = new System.Drawing.Size(108, 16);
-            this.lblHasAlarm.TabIndex = 7;
-            this.lblHasAlarm.Text = "Possui Alarme";
-            this.lblHasAlarm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblHasAlarm.Click += new System.EventHandler(this.Label3_Click);
+            this.lblPropertyHasAlarm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPropertyHasAlarm.AutoSize = true;
+            this.lblPropertyHasAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropertyHasAlarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropertyHasAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblPropertyHasAlarm.Location = new System.Drawing.Point(29, 150);
+            this.lblPropertyHasAlarm.Name = "lblPropertyHasAlarm";
+            this.lblPropertyHasAlarm.Size = new System.Drawing.Size(108, 16);
+            this.lblPropertyHasAlarm.TabIndex = 7;
+            this.lblPropertyHasAlarm.Text = "Possui Alarme";
+            this.lblPropertyHasAlarm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPropertyHasAlarm.Click += new System.EventHandler(this.Label3_Click);
             // 
-            // cbbStates
+            // cbbPropertyStates
             // 
-            this.cbbStates.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbStates.FormattingEnabled = true;
-            this.cbbStates.Location = new System.Drawing.Point(530, 64);
-            this.cbbStates.Name = "cbbStates";
-            this.cbbStates.Size = new System.Drawing.Size(235, 21);
-            this.cbbStates.Sorted = true;
-            this.cbbStates.TabIndex = 3;
-            this.cbbStates.TextChanged += new System.EventHandler(this.cbbState_TextChanged);
-            this.cbbStates.Leave += new System.EventHandler(this.cbbStates_Leave);
+            this.cbbPropertyStates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbPropertyStates.FormattingEnabled = true;
+            this.cbbPropertyStates.Location = new System.Drawing.Point(530, 64);
+            this.cbbPropertyStates.Name = "cbbPropertyStates";
+            this.cbbPropertyStates.Size = new System.Drawing.Size(235, 21);
+            this.cbbPropertyStates.Sorted = true;
+            this.cbbPropertyStates.TabIndex = 3;
+            this.cbbPropertyStates.TextChanged += new System.EventHandler(this.cbbState_TextChanged);
+            this.cbbPropertyStates.Leave += new System.EventHandler(this.cbbStates_Leave);
             // 
-            // lblState
+            // lblPropertyStates
             // 
-            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblState.AutoSize = true;
-            this.lblState.BackColor = System.Drawing.Color.Transparent;
-            this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.lblState.Location = new System.Drawing.Point(467, 69);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(57, 16);
-            this.lblState.TabIndex = 9;
-            this.lblState.Text = "Estado";
-            this.lblState.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPropertyStates.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPropertyStates.AutoSize = true;
+            this.lblPropertyStates.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropertyStates.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropertyStates.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblPropertyStates.Location = new System.Drawing.Point(467, 69);
+            this.lblPropertyStates.Name = "lblPropertyStates";
+            this.lblPropertyStates.Size = new System.Drawing.Size(57, 16);
+            this.lblPropertyStates.TabIndex = 9;
+            this.lblPropertyStates.Text = "Estado";
+            this.lblPropertyStates.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblCity
+            // lblPropertyCities
             // 
-            this.lblCity.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCity.AutoSize = true;
-            this.lblCity.BackColor = System.Drawing.Color.Transparent;
-            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.lblCity.Location = new System.Drawing.Point(466, 110);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(58, 16);
-            this.lblCity.TabIndex = 11;
-            this.lblCity.Text = "Cidade";
-            this.lblCity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPropertyCities.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPropertyCities.AutoSize = true;
+            this.lblPropertyCities.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropertyCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropertyCities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblPropertyCities.Location = new System.Drawing.Point(466, 110);
+            this.lblPropertyCities.Name = "lblPropertyCities";
+            this.lblPropertyCities.Size = new System.Drawing.Size(58, 16);
+            this.lblPropertyCities.TabIndex = 11;
+            this.lblPropertyCities.Text = "Cidade";
+            this.lblPropertyCities.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cbbCities
+            // cbbPropertyCities
             // 
-            this.cbbCities.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbCities.FormattingEnabled = true;
-            this.cbbCities.Location = new System.Drawing.Point(530, 105);
-            this.cbbCities.Name = "cbbCities";
-            this.cbbCities.Size = new System.Drawing.Size(235, 21);
-            this.cbbCities.Sorted = true;
-            this.cbbCities.TabIndex = 4;
-            this.cbbCities.Leave += new System.EventHandler(this.cbbCities_Leave);
+            this.cbbPropertyCities.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbPropertyCities.FormattingEnabled = true;
+            this.cbbPropertyCities.Location = new System.Drawing.Point(530, 105);
+            this.cbbPropertyCities.Name = "cbbPropertyCities";
+            this.cbbPropertyCities.Size = new System.Drawing.Size(235, 21);
+            this.cbbPropertyCities.Sorted = true;
+            this.cbbPropertyCities.TabIndex = 4;
+            this.cbbPropertyCities.Leave += new System.EventHandler(this.cbbCities_Leave);
             // 
             // mktUserPhone
             // 
@@ -313,19 +313,19 @@
             this.lblUserName.Text = "Nome";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label11
+            // lblUserTitle
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(379, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 24);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Usuário";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUserTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUserTitle.AutoSize = true;
+            this.lblUserTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUserTitle.Location = new System.Drawing.Point(379, 10);
+            this.lblUserTitle.Name = "lblUserTitle";
+            this.lblUserTitle.Size = new System.Drawing.Size(81, 24);
+            this.lblUserTitle.TabIndex = 1;
+            this.lblUserTitle.Text = "Usuário";
+            this.lblUserTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // mktUserEmail
             // 
@@ -385,6 +385,7 @@
             this.mktUserStreet.Size = new System.Drawing.Size(236, 21);
             this.mktUserStreet.TabIndex = 9;
             this.mktUserStreet.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MaskedTextBox7_MaskInputRejected);
+            this.mktUserStreet.Leave += new System.EventHandler(this.mktUserStreet_Leave);
             // 
             // lblUserStreet
             // 
@@ -405,11 +406,11 @@
             // 
             this.mktUserNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mktUserNumber.Location = new System.Drawing.Point(529, 94);
-            this.mktUserNumber.Mask = "999999990";
             this.mktUserNumber.Name = "mktUserNumber";
             this.mktUserNumber.Size = new System.Drawing.Size(236, 21);
             this.mktUserNumber.TabIndex = 10;
             this.mktUserNumber.ValidatingType = typeof(int);
+            this.mktUserNumber.Leave += new System.EventHandler(this.mktUserNumber_Leave);
             // 
             // lblUserNumber
             // 
@@ -432,6 +433,7 @@
             this.mktUserNeighborhood.Name = "mktUserNeighborhood";
             this.mktUserNeighborhood.Size = new System.Drawing.Size(236, 21);
             this.mktUserNeighborhood.TabIndex = 11;
+            this.mktUserNeighborhood.Leave += new System.EventHandler(this.mktUserNeighborhood_Leave);
             // 
             // lblUserNeighborhood
             // 
@@ -453,7 +455,8 @@
             this.mktUserStateAcronym.Location = new System.Drawing.Point(738, 177);
             this.mktUserStateAcronym.Name = "mktUserStateAcronym";
             this.mktUserStateAcronym.Size = new System.Drawing.Size(27, 21);
-            this.mktUserStateAcronym.TabIndex = 12;
+            this.mktUserStateAcronym.TabIndex = 13;
+            this.mktUserStateAcronym.Leave += new System.EventHandler(this.mktUserStateAcronym_Leave);
             // 
             // lblUserStateAcronym
             // 
@@ -469,144 +472,167 @@
             this.lblUserStateAcronym.Text = "UF";
             this.lblUserStateAcronym.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pnlUsuario
+            // pnlUser
             // 
-            this.pnlUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlUsuario.BackColor = System.Drawing.Color.White;
-            this.pnlUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlUsuario.Controls.Add(this.mktUserCity);
-            this.pnlUsuario.Controls.Add(this.lblUserCity);
-            this.pnlUsuario.Controls.Add(this.mktUserStateAcronym);
-            this.pnlUsuario.Controls.Add(this.label11);
-            this.pnlUsuario.Controls.Add(this.lblUserStateAcronym);
-            this.pnlUsuario.Controls.Add(this.lblUserName);
-            this.pnlUsuario.Controls.Add(this.mktUserNeighborhood);
-            this.pnlUsuario.Controls.Add(this.mktUserName);
-            this.pnlUsuario.Controls.Add(this.lblUserNeighborhood);
-            this.pnlUsuario.Controls.Add(this.lblUserPhone);
-            this.pnlUsuario.Controls.Add(this.mktUserNumber);
-            this.pnlUsuario.Controls.Add(this.mktUserPhone);
-            this.pnlUsuario.Controls.Add(this.lblUserNumber);
-            this.pnlUsuario.Controls.Add(this.lblUserEmail);
-            this.pnlUsuario.Controls.Add(this.mktUserStreet);
-            this.pnlUsuario.Controls.Add(this.mktUserEmail);
-            this.pnlUsuario.Controls.Add(this.lblUserStreet);
-            this.pnlUsuario.Controls.Add(this.lblUserZipCode);
-            this.pnlUsuario.Controls.Add(this.mktUserZipCode);
-            this.pnlUsuario.Location = new System.Drawing.Point(-5, 240);
-            this.pnlUsuario.Name = "pnlUsuario";
-            this.pnlUsuario.Size = new System.Drawing.Size(819, 226);
-            this.pnlUsuario.TabIndex = 5;
-            this.pnlUsuario.TabStop = true;
+            this.pnlUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlUser.BackColor = System.Drawing.Color.White;
+            this.pnlUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlUser.Controls.Add(this.mktUserCity);
+            this.pnlUser.Controls.Add(this.lblUserCity);
+            this.pnlUser.Controls.Add(this.mktUserStateAcronym);
+            this.pnlUser.Controls.Add(this.lblUserTitle);
+            this.pnlUser.Controls.Add(this.lblUserStateAcronym);
+            this.pnlUser.Controls.Add(this.lblUserName);
+            this.pnlUser.Controls.Add(this.mktUserNeighborhood);
+            this.pnlUser.Controls.Add(this.mktUserName);
+            this.pnlUser.Controls.Add(this.lblUserNeighborhood);
+            this.pnlUser.Controls.Add(this.lblUserPhone);
+            this.pnlUser.Controls.Add(this.mktUserNumber);
+            this.pnlUser.Controls.Add(this.mktUserPhone);
+            this.pnlUser.Controls.Add(this.lblUserNumber);
+            this.pnlUser.Controls.Add(this.lblUserEmail);
+            this.pnlUser.Controls.Add(this.mktUserStreet);
+            this.pnlUser.Controls.Add(this.mktUserEmail);
+            this.pnlUser.Controls.Add(this.lblUserStreet);
+            this.pnlUser.Controls.Add(this.lblUserZipCode);
+            this.pnlUser.Controls.Add(this.mktUserZipCode);
+            this.pnlUser.Location = new System.Drawing.Point(-5, 240);
+            this.pnlUser.Name = "pnlUser";
+            this.pnlUser.Size = new System.Drawing.Size(819, 226);
+            this.pnlUser.TabIndex = 5;
+            this.pnlUser.TabStop = true;
             // 
-            // panel1
+            // mktUserCity
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lblCity);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cbbCities);
-            this.panel1.Controls.Add(this.lblPropertyValue);
-            this.panel1.Controls.Add(this.lblState);
-            this.panel1.Controls.Add(this.mktPropertyValue);
-            this.panel1.Controls.Add(this.cbbStates);
-            this.panel1.Controls.Add(this.lblGoodsValue);
-            this.panel1.Controls.Add(this.lblHasAlarm);
-            this.panel1.Controls.Add(this.mktGoodsValue);
-            this.panel1.Controls.Add(this.ckbHasAlarme);
-            this.panel1.Location = new System.Drawing.Point(-5, 53);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 192);
-            this.panel1.TabIndex = 0;
-            this.panel1.TabStop = true;
+            this.mktUserCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktUserCity.Location = new System.Drawing.Point(530, 177);
+            this.mktUserCity.Name = "mktUserCity";
+            this.mktUserCity.Size = new System.Drawing.Size(127, 21);
+            this.mktUserCity.TabIndex = 12;
+            this.mktUserCity.Leave += new System.EventHandler(this.mktUserCity_Leave);
             // 
-            // panel2
+            // lblUserCity
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.checkBox3);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.lblContratoDeSeguroTitle);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.maskedTextBox13);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.maskedTextBox15);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Location = new System.Drawing.Point(-5, 463);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 138);
-            this.panel2.TabIndex = 13;
-            this.panel2.TabStop = true;
+            this.lblUserCity.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUserCity.AutoSize = true;
+            this.lblUserCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblUserCity.Location = new System.Drawing.Point(466, 182);
+            this.lblUserCity.Name = "lblUserCity";
+            this.lblUserCity.Size = new System.Drawing.Size(58, 16);
+            this.lblUserCity.TabIndex = 24;
+            this.lblUserCity.Text = "Cidade";
+            this.lblUserCity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // checkBox3
+            // pnlProperty
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Location = new System.Drawing.Point(663, 104);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.pnlProperty.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlProperty.BackColor = System.Drawing.Color.White;
+            this.pnlProperty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlProperty.Controls.Add(this.lblPropertyCities);
+            this.pnlProperty.Controls.Add(this.lblPropertyTitle);
+            this.pnlProperty.Controls.Add(this.cbbPropertyCities);
+            this.pnlProperty.Controls.Add(this.lblPropertyValue);
+            this.pnlProperty.Controls.Add(this.lblPropertyStates);
+            this.pnlProperty.Controls.Add(this.mktPropertyValue);
+            this.pnlProperty.Controls.Add(this.cbbPropertyStates);
+            this.pnlProperty.Controls.Add(this.lblPropertyGoodsValue);
+            this.pnlProperty.Controls.Add(this.lblPropertyHasAlarm);
+            this.pnlProperty.Controls.Add(this.mktPropertyGoodsValue);
+            this.pnlProperty.Controls.Add(this.ckbPropertyHasAlarme);
+            this.pnlProperty.Location = new System.Drawing.Point(-5, 53);
+            this.pnlProperty.Name = "pnlProperty";
+            this.pnlProperty.Size = new System.Drawing.Size(819, 192);
+            this.pnlProperty.TabIndex = 0;
+            this.pnlProperty.TabStop = true;
             // 
-            // label18
+            // pnlInsurance
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.label18.Location = new System.Drawing.Point(578, 102);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 16);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Desastres";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pnlInsurance.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlInsurance.BackColor = System.Drawing.Color.White;
+            this.pnlInsurance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlInsurance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlInsurance.Controls.Add(this.ckbInsuranceDisasters);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceDisasters);
+            this.pnlInsurance.Controls.Add(this.ckbInsuranceTheft);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceTheft);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceTitle);
+            this.pnlInsurance.Controls.Add(this.label16);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceMonthlyPay);
+            this.pnlInsurance.Controls.Add(this.mktInsuranceMonthlyPay);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceFranchise);
+            this.pnlInsurance.Controls.Add(this.mktInsuranceFranchise);
+            this.pnlInsurance.Controls.Add(this.lblInsuranceTheftAndDisasters);
+            this.pnlInsurance.Location = new System.Drawing.Point(-5, 463);
+            this.pnlInsurance.Name = "pnlInsurance";
+            this.pnlInsurance.Size = new System.Drawing.Size(819, 138);
+            this.pnlInsurance.TabIndex = 13;
+            this.pnlInsurance.TabStop = true;
             // 
-            // checkBox2
+            // ckbInsuranceDisasters
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Location = new System.Drawing.Point(536, 104);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ckbInsuranceDisasters.AutoSize = true;
+            this.ckbInsuranceDisasters.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckbInsuranceDisasters.Location = new System.Drawing.Point(663, 104);
+            this.ckbInsuranceDisasters.Name = "ckbInsuranceDisasters";
+            this.ckbInsuranceDisasters.Size = new System.Drawing.Size(15, 14);
+            this.ckbInsuranceDisasters.TabIndex = 15;
+            this.ckbInsuranceDisasters.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // lblInsuranceDisasters
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.label15.Location = new System.Drawing.Point(475, 102);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 16);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Roubo";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblInsuranceDisasters.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceDisasters.AutoSize = true;
+            this.lblInsuranceDisasters.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceDisasters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceDisasters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.lblInsuranceDisasters.Location = new System.Drawing.Point(578, 102);
+            this.lblInsuranceDisasters.Name = "lblInsuranceDisasters";
+            this.lblInsuranceDisasters.Size = new System.Drawing.Size(79, 16);
+            this.lblInsuranceDisasters.TabIndex = 26;
+            this.lblInsuranceDisasters.Text = "Desastres";
+            this.lblInsuranceDisasters.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblContratoDeSeguroTitle
+            // ckbInsuranceTheft
             // 
-            this.lblContratoDeSeguroTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblContratoDeSeguroTitle.AutoSize = true;
-            this.lblContratoDeSeguroTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblContratoDeSeguroTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContratoDeSeguroTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblContratoDeSeguroTitle.Location = new System.Drawing.Point(323, 5);
-            this.lblContratoDeSeguroTitle.Name = "lblContratoDeSeguroTitle";
-            this.lblContratoDeSeguroTitle.Size = new System.Drawing.Size(192, 24);
-            this.lblContratoDeSeguroTitle.TabIndex = 1;
-            this.lblContratoDeSeguroTitle.Text = "Contrato de Seguro";
-            this.lblContratoDeSeguroTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblContratoDeSeguroTitle.Click += new System.EventHandler(this.Label15_Click);
+            this.ckbInsuranceTheft.AutoSize = true;
+            this.ckbInsuranceTheft.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckbInsuranceTheft.Location = new System.Drawing.Point(536, 104);
+            this.ckbInsuranceTheft.Name = "ckbInsuranceTheft";
+            this.ckbInsuranceTheft.Size = new System.Drawing.Size(15, 14);
+            this.ckbInsuranceTheft.TabIndex = 14;
+            this.ckbInsuranceTheft.UseVisualStyleBackColor = true;
+            // 
+            // lblInsuranceTheft
+            // 
+            this.lblInsuranceTheft.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceTheft.AutoSize = true;
+            this.lblInsuranceTheft.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceTheft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceTheft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.lblInsuranceTheft.Location = new System.Drawing.Point(475, 102);
+            this.lblInsuranceTheft.Name = "lblInsuranceTheft";
+            this.lblInsuranceTheft.Size = new System.Drawing.Size(54, 16);
+            this.lblInsuranceTheft.TabIndex = 25;
+            this.lblInsuranceTheft.Text = "Roubo";
+            this.lblInsuranceTheft.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblInsuranceTitle
+            // 
+            this.lblInsuranceTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceTitle.AutoSize = true;
+            this.lblInsuranceTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblInsuranceTitle.Location = new System.Drawing.Point(323, 5);
+            this.lblInsuranceTitle.Name = "lblInsuranceTitle";
+            this.lblInsuranceTitle.Size = new System.Drawing.Size(193, 24);
+            this.lblInsuranceTitle.TabIndex = 1;
+            this.lblInsuranceTitle.Text = "Seguro Residencial";
+            this.lblInsuranceTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblInsuranceTitle.Click += new System.EventHandler(this.Label15_Click);
             // 
             // label16
             // 
@@ -622,66 +648,66 @@
             this.label16.Text = "UF";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label17
+            // lblInsuranceMonthlyPay
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label17.Location = new System.Drawing.Point(38, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 16);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Mensalidade";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblInsuranceMonthlyPay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceMonthlyPay.AutoSize = true;
+            this.lblInsuranceMonthlyPay.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceMonthlyPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceMonthlyPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblInsuranceMonthlyPay.Location = new System.Drawing.Point(38, 61);
+            this.lblInsuranceMonthlyPay.Name = "lblInsuranceMonthlyPay";
+            this.lblInsuranceMonthlyPay.Size = new System.Drawing.Size(98, 16);
+            this.lblInsuranceMonthlyPay.TabIndex = 2;
+            this.lblInsuranceMonthlyPay.Text = "Mensalidade";
+            this.lblInsuranceMonthlyPay.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // maskedTextBox13
+            // mktInsuranceMonthlyPay
             // 
-            this.maskedTextBox13.Enabled = false;
-            this.maskedTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox13.Location = new System.Drawing.Point(140, 56);
-            this.maskedTextBox13.Name = "maskedTextBox13";
-            this.maskedTextBox13.Size = new System.Drawing.Size(204, 21);
-            this.maskedTextBox13.TabIndex = 18;
+            this.mktInsuranceMonthlyPay.Enabled = false;
+            this.mktInsuranceMonthlyPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktInsuranceMonthlyPay.Location = new System.Drawing.Point(140, 56);
+            this.mktInsuranceMonthlyPay.Name = "mktInsuranceMonthlyPay";
+            this.mktInsuranceMonthlyPay.Size = new System.Drawing.Size(204, 21);
+            this.mktInsuranceMonthlyPay.TabIndex = 18;
             // 
-            // label19
+            // lblInsuranceFranchise
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label19.Location = new System.Drawing.Point(64, 102);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 16);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Franquia";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblInsuranceFranchise.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceFranchise.AutoSize = true;
+            this.lblInsuranceFranchise.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceFranchise.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceFranchise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblInsuranceFranchise.Location = new System.Drawing.Point(64, 102);
+            this.lblInsuranceFranchise.Name = "lblInsuranceFranchise";
+            this.lblInsuranceFranchise.Size = new System.Drawing.Size(69, 16);
+            this.lblInsuranceFranchise.TabIndex = 4;
+            this.lblInsuranceFranchise.Text = "Franquia";
+            this.lblInsuranceFranchise.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // maskedTextBox15
+            // mktInsuranceFranchise
             // 
-            this.maskedTextBox15.Enabled = false;
-            this.maskedTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox15.Location = new System.Drawing.Point(140, 99);
-            this.maskedTextBox15.Name = "maskedTextBox15";
-            this.maskedTextBox15.Size = new System.Drawing.Size(204, 21);
-            this.maskedTextBox15.TabIndex = 19;
+            this.mktInsuranceFranchise.Enabled = false;
+            this.mktInsuranceFranchise.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktInsuranceFranchise.Location = new System.Drawing.Point(140, 99);
+            this.mktInsuranceFranchise.Name = "mktInsuranceFranchise";
+            this.mktInsuranceFranchise.Size = new System.Drawing.Size(204, 21);
+            this.mktInsuranceFranchise.TabIndex = 19;
             // 
-            // label23
+            // lblInsuranceTheftAndDisasters
             // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.label23.Location = new System.Drawing.Point(475, 61);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(84, 16);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "Coberturas";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label23.Click += new System.EventHandler(this.label23_Click);
+            this.lblInsuranceTheftAndDisasters.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblInsuranceTheftAndDisasters.AutoSize = true;
+            this.lblInsuranceTheftAndDisasters.BackColor = System.Drawing.Color.Transparent;
+            this.lblInsuranceTheftAndDisasters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsuranceTheftAndDisasters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
+            this.lblInsuranceTheftAndDisasters.Location = new System.Drawing.Point(475, 61);
+            this.lblInsuranceTheftAndDisasters.Name = "lblInsuranceTheftAndDisasters";
+            this.lblInsuranceTheftAndDisasters.Size = new System.Drawing.Size(84, 16);
+            this.lblInsuranceTheftAndDisasters.TabIndex = 14;
+            this.lblInsuranceTheftAndDisasters.Text = "Coberturas";
+            this.lblInsuranceTheftAndDisasters.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblInsuranceTheftAndDisasters.Click += new System.EventHandler(this.label23_Click);
             // 
             // label24
             // 
@@ -697,72 +723,73 @@
             this.label24.Text = "UF";
             this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel3
+            // pnlButtons
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Location = new System.Drawing.Point(-5, 599);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(819, 65);
-            this.panel3.TabIndex = 15;
-            this.panel3.TabStop = true;
+            this.pnlButtons.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlButtons.BackColor = System.Drawing.Color.White;
+            this.pnlButtons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlButtons.Controls.Add(this.btnExit);
+            this.pnlButtons.Controls.Add(this.btnClear);
+            this.pnlButtons.Controls.Add(this.btnSimulate);
+            this.pnlButtons.Controls.Add(this.label24);
+            this.pnlButtons.Location = new System.Drawing.Point(-5, 599);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(819, 65);
+            this.pnlButtons.TabIndex = 15;
+            this.pnlButtons.TabStop = true;
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(26, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 45);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Sair";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(26, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(90, 45);
+            this.btnExit.TabIndex = 18;
+            this.btnExit.Text = "Sair";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(536, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 45);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Limpar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Location = new System.Drawing.Point(536, 13);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(90, 45);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnSimulate
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(675, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 45);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Simular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSimulate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSimulate.Location = new System.Drawing.Point(675, 13);
+            this.btnSimulate.Name = "btnSimulate";
+            this.btnSimulate.Size = new System.Drawing.Size(90, 45);
+            this.btnSimulate.TabIndex = 16;
+            this.btnSimulate.Text = "Simular";
+            this.btnSimulate.UseVisualStyleBackColor = true;
+            this.btnSimulate.Click += new System.EventHandler(this.button1_Click);
             // 
             // epvPropertyValue
             // 
             this.epvPropertyValue.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epvPropertyValue.ContainerControl = this;
             // 
-            // epvGoodsValue
+            // epvPropertyGoodsValue
             // 
-            this.epvGoodsValue.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.epvGoodsValue.ContainerControl = this;
+            this.epvPropertyGoodsValue.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epvPropertyGoodsValue.ContainerControl = this;
             // 
-            // epvStates
+            // epvPropertyStates
             // 
-            this.epvStates.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.epvStates.ContainerControl = this;
+            this.epvPropertyStates.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epvPropertyStates.ContainerControl = this;
             // 
-            // epvCities
+            // epvPropertyCities
             // 
-            this.epvCities.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.epvCities.ContainerControl = this;
+            this.epvPropertyCities.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epvPropertyCities.ContainerControl = this;
             // 
             // epvUserName
             // 
@@ -804,28 +831,6 @@
             this.epvUserStateAcronym.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epvUserStateAcronym.ContainerControl = this;
             // 
-            // mktUserCity
-            // 
-            this.mktUserCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktUserCity.Location = new System.Drawing.Point(530, 177);
-            this.mktUserCity.Name = "mktUserCity";
-            this.mktUserCity.Size = new System.Drawing.Size(158, 21);
-            this.mktUserCity.TabIndex = 23;
-            // 
-            // lblUserCity
-            // 
-            this.lblUserCity.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblUserCity.AutoSize = true;
-            this.lblUserCity.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
-            this.lblUserCity.Location = new System.Drawing.Point(466, 182);
-            this.lblUserCity.Name = "lblUserCity";
-            this.lblUserCity.Size = new System.Drawing.Size(58, 16);
-            this.lblUserCity.TabIndex = 24;
-            this.lblUserCity.Text = "Cidade";
-            this.lblUserCity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // epvUserNeighborhood
             // 
             this.epvUserNeighborhood.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -837,11 +842,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(62)))), ((int)(((byte)(107)))));
             this.ClientSize = new System.Drawing.Size(808, 665);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pnlUsuario);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.pnlInsurance);
+            this.Controls.Add(this.pnlButtons);
+            this.Controls.Add(this.pnlUser);
+            this.Controls.Add(this.pnlProperty);
+            this.Controls.Add(this.lblTitleForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -849,18 +854,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "iSegres";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.pnlUsuario.ResumeLayout(false);
-            this.pnlUsuario.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlUser.ResumeLayout(false);
+            this.pnlUser.PerformLayout();
+            this.pnlProperty.ResumeLayout(false);
+            this.pnlProperty.PerformLayout();
+            this.pnlInsurance.ResumeLayout(false);
+            this.pnlInsurance.PerformLayout();
+            this.pnlButtons.ResumeLayout(false);
+            this.pnlButtons.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epvPropertyValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvGoodsValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvStates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epvCities)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyGoodsValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyStates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvPropertyCities)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvUserEmail)).EndInit();
@@ -877,25 +882,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitleForm1;
+        private System.Windows.Forms.Label lblPropertyTitle;
         private System.Windows.Forms.Label lblPropertyValue;
-        private System.Windows.Forms.Label lblHasAlarm;
-        private System.Windows.Forms.CheckBox ckbHasAlarme;
-        private System.Windows.Forms.MaskedTextBox mktGoodsValue;
-        private System.Windows.Forms.Label lblGoodsValue;
+        private System.Windows.Forms.Label lblPropertyHasAlarm;
+        private System.Windows.Forms.CheckBox ckbPropertyHasAlarme;
+        private System.Windows.Forms.MaskedTextBox mktPropertyGoodsValue;
+        private System.Windows.Forms.Label lblPropertyGoodsValue;
         private System.Windows.Forms.MaskedTextBox mktPropertyValue;
-        private System.Windows.Forms.ComboBox cbbStates;
-        private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.ComboBox cbbCities;
-        private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.ComboBox cbbPropertyStates;
+        private System.Windows.Forms.Label lblPropertyCities;
+        private System.Windows.Forms.ComboBox cbbPropertyCities;
+        private System.Windows.Forms.Label lblPropertyStates;
         private System.Windows.Forms.MaskedTextBox mktUserEmail;
         private System.Windows.Forms.Label lblUserEmail;
         private System.Windows.Forms.MaskedTextBox mktUserPhone;
         private System.Windows.Forms.Label lblUserPhone;
         private System.Windows.Forms.MaskedTextBox mktUserName;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblUserTitle;
         private System.Windows.Forms.MaskedTextBox mktUserZipCode;
         private System.Windows.Forms.Label lblUserZipCode;
         private System.Windows.Forms.MaskedTextBox mktUserStreet;
@@ -906,29 +911,29 @@
         private System.Windows.Forms.Label lblUserStateAcronym;
         private System.Windows.Forms.MaskedTextBox mktUserNeighborhood;
         private System.Windows.Forms.Label lblUserNeighborhood;
-        private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblContratoDeSeguroTitle;
+        private System.Windows.Forms.Panel pnlUser;
+        private System.Windows.Forms.Panel pnlProperty;
+        private System.Windows.Forms.Panel pnlInsurance;
+        private System.Windows.Forms.Label lblInsuranceTitle;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox13;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox15;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblInsuranceMonthlyPay;
+        private System.Windows.Forms.MaskedTextBox mktInsuranceMonthlyPay;
+        private System.Windows.Forms.Label lblInsuranceFranchise;
+        private System.Windows.Forms.MaskedTextBox mktInsuranceFranchise;
+        private System.Windows.Forms.Label lblInsuranceTheftAndDisasters;
+        private System.Windows.Forms.CheckBox ckbInsuranceDisasters;
+        private System.Windows.Forms.CheckBox ckbInsuranceTheft;
+        private System.Windows.Forms.Label lblInsuranceTheft;
+        private System.Windows.Forms.Label lblInsuranceDisasters;
+        private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSimulate;
         private System.Windows.Forms.ErrorProvider epvPropertyValue;
-        private System.Windows.Forms.ErrorProvider epvGoodsValue;
-        private System.Windows.Forms.ErrorProvider epvStates;
-        private System.Windows.Forms.ErrorProvider epvCities;
+        private System.Windows.Forms.ErrorProvider epvPropertyGoodsValue;
+        private System.Windows.Forms.ErrorProvider epvPropertyStates;
+        private System.Windows.Forms.ErrorProvider epvPropertyCities;
         private System.Windows.Forms.ErrorProvider epvUserName;
         private System.Windows.Forms.ErrorProvider epvUserPhone;
         private System.Windows.Forms.ErrorProvider epvUserEmail;
