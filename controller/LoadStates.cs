@@ -1,6 +1,7 @@
 ﻿using Classes;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -36,7 +37,7 @@ namespace SimuladorSegurosResidenciais.controller
                 {
                     string[] content = line.Split(',');
                     State state = new State(content[0], content[1].ToCharArray());
-                    City city = new City(content[2], double.Parse(content[3]));
+                    City city = new City(content[2], double.Parse(content[3], CultureInfo.InvariantCulture) / 100.0);
                     state.addCity(city);
                     states.AddLast(state);
                 }

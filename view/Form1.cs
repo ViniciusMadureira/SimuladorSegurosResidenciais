@@ -2,8 +2,10 @@
 using SimuladorSegurosResidenciais.controller;
 using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SimuladorSegurosResidenciais
@@ -42,7 +44,7 @@ namespace SimuladorSegurosResidenciais
         }
 
         private bool validateMaskedTextBoxCurrency(MaskedTextBox mkt, ErrorProvider epv)
-        {
+        {   
             Double inputValue;
             mkt.Text = mkt.Text.Replace("R$ ", "");
             if (Double.TryParse(mkt.Text, out inputValue))
@@ -91,10 +93,10 @@ namespace SimuladorSegurosResidenciais
         }
 
         private bool validateMaskedTextBoxPhone(MaskedTextBox mkt, ErrorProvider epv, int minLength, int maxLength)
-        {                        
-            if (Regex.IsMatch(mkt.Text, @"^\d{" + minLength + "," + maxLength + "}$")) 
-            {
-                string text = string.Join("", mkt.Text.ToCharArray().Where(Char.IsDigit));
+        {
+            string text = string.Join("", mkt.Text.ToCharArray().Where(Char.IsDigit));
+            if (Regex.IsMatch(text, @"^\d{" + minLength + "," + maxLength + "}$")) 
+            {   
                 Int64 value = Int64.Parse(text);
                 if (value > 0)
                 {
@@ -167,10 +169,14 @@ namespace SimuladorSegurosResidenciais
                     LoadZipCode loadZipCode = new LoadZipCode(zipCode);
                     if (loadZipCode.isSuccessed())
                     {
-                        mktUserStreet.Text = loadZipCode.getStreet();
-                        mktUserCity.Text = loadZipCode.getCity();
-                        mktUserNeighborhood.Text = loadZipCode.getNeighborhood();
+                        mktUserStreet.Text = loadZipCode.getStreet();                        
+                        mktUserCity.Text = loadZipCode.getCity();                        
+                        mktUserNeighborhood.Text = loadZipCode.getNeighborhood();                        
                         mktUserStateAcronym.Text = loadZipCode.getState();
+                        validateMaskedTextBoxLength(mktUserStreet, epvUserStreet, 2, 30);
+                        validateMaskedTextBoxLength(mktUserNeighborhood, epvUserNeighborhood, 2, 30);
+                        validateMaskedTextBoxLength(mktUserCity, epvUserCity, 2, 30);
+                        validateMaskedTextBoxLength(mktUserStateAcronym, epvUserStateAcronym, 2, 2);
                         mktUserNumber.Focus();
                     }
                 }
@@ -178,7 +184,7 @@ namespace SimuladorSegurosResidenciais
                 {
                     Console.WriteLine(ex.Message);
                 }
-            }           
+            }
             return true;
         }
 
@@ -279,28 +285,25 @@ namespace SimuladorSegurosResidenciais
             double? value = null, goodsValue = null;
             bool? hasAlarme = false;
             bool isValid = true;
-
             try
-            {
-                value = double.Parse(mktPropertyValue.Text.Replace("R$ ", "").Replace(".", "").Replace(",", "."));
+            {                
+                value = double.Parse(mktPropertyValue.Text.Replace("R$ ", "").Replace(".", "").Replace(",", "."), CultureInfo.InvariantCulture);
             }
             catch (Exception ex)
             {
                 isValid = false;
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("Preencha corretamente o campo 'Valor' no grupo 'Imóvel!'", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            }            
             try
             {
-                goodsValue = double.Parse(mktPropertyGoodsValue.Text.Replace("R$ ", "").Replace(".", "").Replace(",", "."));
+                goodsValue = double.Parse(mktPropertyGoodsValue.Text.Replace("R$ ", "").Replace(".", "").Replace(",", "."), CultureInfo.InvariantCulture);
             } catch (Exception ex)
             {
                 isValid = false;
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("Preencha corretamente o campo 'Valor Bens' no grupo 'Imóvel!'", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-            }
-            
+            }            
             if (ckbPropertyHasAlarme.CheckState == CheckState.Indeterminate)
             {
                 isValid = false;    
@@ -308,44 +311,40 @@ namespace SimuladorSegurosResidenciais
             } else
             {
                 hasAlarme = ckbPropertyHasAlarme.CheckState == CheckState.Checked ? true : false;
-            }
-            
+            }            
             State stateCbb = null;
+            City cityCbb = null;
             if (validateCombobox(cbbPropertyStates, epvPropertyStates))
             {                
                 if (loadStates.getStates().Count > 0)
                 {
+                    bool found = false;
                     foreach (var state in loadStates.getStates())
                     {
-                        if (cbbPropertyStates.SelectedItem.ToString() == state.getName())
+                        if (cbbPropertyStates.SelectedItem.ToString() == state.getName().ToUpper())
                         {
-                            stateCbb = state;
-                            break;
+                            stateCbb = state; 
+                            foreach (var city in stateCbb.getCities())
+                            {
+                                if (cbbPropertyCities.SelectedItem.ToString() == city.getName().ToUpper())
+                                {
+                                    cityCbb = city;
+                                    found = true;
+                                    break;
+                                }
+                            }                            
+                            if (found)
+                            {
+                                break;
+                            }
                         }
                     }
                 }
             } else
-            {
-                MessageBox.Show("Escolha o estado (UF) do 'Imóvel!'", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isValid = false;
-            }
-            City cityCbb = null;
-            if (validateCombobox(cbbPropertyCities, epvPropertyCities) && stateCbb != null)
-            {   
-                if (stateCbb.getCities().Count > 0)
-                {
-                    foreach (var city in stateCbb.getCities())
-                    {
-                        if (cbbPropertyCities.SelectedItem.ToString() == city.getName())
-                        {
-                            cityCbb = city;
-                        }
-                    }
-                }
-            } else
-            {
+            {  
                 isValid = false;
             }            
+
             if (isValid)
             {
                 Console.WriteLine(cityCbb.getIndividualIndex());
@@ -367,12 +366,12 @@ namespace SimuladorSegurosResidenciais
             } else
             {
                 isValid = false;
-            }           
+            }            
             if (validateMaskedTextBoxPhone(mktUserPhone, epvUserPhone, 10, 11))
             {
                 try
-                {
-                    phone = Int64.Parse(string.Join("", mktUserPhone.Text.ToCharArray().Where(Char.IsDigit)));
+                {                    
+                    phone = Int64.Parse(string.Join("", mktUserPhone.Text.ToCharArray().Where(Char.IsDigit)));                    
                 } catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
@@ -381,51 +380,64 @@ namespace SimuladorSegurosResidenciais
             } else
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxEmail(mktUserEmail, epvUserEmail))
             {
                 email = mktUserEmail.Text.Trim();
             } else
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxDigit(mktUserNumber, epvUserNumber, 0, 9999999))
             {
                 number = Int64.Parse(mktUserNumber.Text.Trim());
             } else
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxLength(mktUserStreet, epvUserStreet, 2, 30))
             {
                 street = mktUserStreet.Text.Trim();
             } else
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxLength(mktUserNeighborhood, epvUserNeighborhood, 2, 30))
             {
                 neighborhood = mktUserNeighborhood.Text.Trim();
             } else 
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxLength(mktUserCity, epvUserCity, 2, 30))
             {
                 city = mktUserCity.Text.Trim();
             } else
             {
                 isValid = false;
-            }
+            }            
             if (validateMaskedTextBoxLength(mktUserStateAcronym, epvUserStateAcronym, 2, 2) && Regex.IsMatch(mktUserStateAcronym.Text, @"^[a-zA-Z]{2}$")) {
                 stateAcronym = mktUserStateAcronym.Text.ToUpper();
-            }
+            } else
+            {
+                isValid = false;
+            }            
             if (isValid)
             {
                User user = new User(name, phone, email, street, number, neighborhood, city, stateAcronym);
                return user;
             }
             return null;
+        }
+
+        private bool validateInsuranceAttributes()
+        {
+            if (ckbInsuranceDisasters.CheckState == CheckState.Indeterminate || ckbInsuranceTheft.CheckState == CheckState.Indeterminate)
+            {
+                MessageBox.Show("Verifique a marcação dos campos para corbetura contra 'Roubo' e 'Desastres'!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -443,16 +455,38 @@ namespace SimuladorSegurosResidenciais
                 cbbPropertyCities.Focus();
             }            
             mktUserName.Focus();
-            bool isValid = validateMaskedTextBoxCurrency(mktPropertyValue, epvPropertyValue)
-                && validateMaskedTextBoxCurrency(mktPropertyGoodsValue, epvPropertyGoodsValue) && 
-                validateCombobox(cbbPropertyStates, epvPropertyStates) && validateCombobox(cbbPropertyCities, epvPropertyCities)
-                ;
+            mktUserPhone.Focus();
+            mktUserEmail.Focus();
+            mktUserZipCode.Focus();
+            mktUserStreet.Focus();
+            mktUserNumber.Focus();
+            mktUserNeighborhood.Focus();
+            mktUserCity.Focus();
+            mktUserStateAcronym.Focus();
+            bool isValid = 
+                validateMaskedTextBoxCurrency(mktPropertyValue, epvPropertyValue)
+                            && validateMaskedTextBoxCurrency(mktPropertyGoodsValue, epvPropertyGoodsValue)
+                            && validateCombobox(cbbPropertyStates, epvPropertyStates)
+                            && validateCombobox(cbbPropertyCities, epvPropertyCities)
+                && validateMaskedTextBoxLength(mktUserName, epvUserName, 3, 80)
+                    && validateMaskedTextBoxPhone(mktUserPhone, epvUserPhone, 10, 11)
+                    && validateMaskedTextBoxEmail(mktUserEmail, epvUserEmail)
+                    && validateMaskedTextBoxZipCode(mktUserZipCode, epvUserZipCode)
+                    && validateMaskedTextBoxLength(mktUserStreet, epvUserStreet, 2, 30)
+                    && validateMaskedTextBoxDigit(mktUserNumber, epvUserNumber, 0, 9999999)
+                    && validateMaskedTextBoxLength(mktUserNeighborhood, epvUserNeighborhood, 2, 30) 
+                    && validateMaskedTextBoxLength(mktUserCity, epvUserCity, 2, 30) 
+                    && validateMaskedTextBoxLength(mktUserStateAcronym, epvUserStateAcronym, 2, 2) && Regex.IsMatch(mktUserStateAcronym.Text, @"^[a-zA-Z]{2}$")
+                && validateInsuranceAttributes();
             // Initialize Model's Classes
             if (isValid)
             {
                 Property property = validatePropertyAttributes();
-                User user = validateUserAttributes();                
-            }            
+                User user = validateUserAttributes();
+                Insurance insurance = new Insurance(ckbInsuranceTheft.Checked, ckbInsuranceDisasters.Checked, property);
+                mktInsuranceFranchise.Text = String.Format("{0:C2}", insurance.getFranchiseValue());
+                mktInsuranceMonthlyPay.Text = String.Format("{0:C2}", insurance.getMonthlyPayment());
+            }         
         }
 
         private void loadCbbCities()
@@ -460,8 +494,7 @@ namespace SimuladorSegurosResidenciais
             cbbPropertyCities.Items.Clear();
             cbbPropertyCities.Text = "Selecionar";
             foreach (var state in loadStates.getStates())
-            {
-                //Console.WriteLine(cbbStates.SelectedItem.ToString());
+            {                
                 if (cbbPropertyStates.SelectedItem.ToString() == state.getName().ToUpper())
                 {
                     foreach (var city in state.getCities())
@@ -504,11 +537,10 @@ namespace SimuladorSegurosResidenciais
         {
             validateMaskedTextBoxLength(mktUserName, epvUserName, 3, 80);
         }
-
+        
         private void mktUserPhone_Leave(object sender, EventArgs e)
         {
-            validateMaskedTextBoxPhone(mktUserPhone, epvUserPhone, 10, 11);
-            
+            validateMaskedTextBoxPhone(mktUserPhone, epvUserPhone, 10, 11);            
         }
 
         private void mktUserEmail_Leave(object sender, EventArgs e)
@@ -535,8 +567,7 @@ namespace SimuladorSegurosResidenciais
 
         private void mktUserZipCode_Click(object sender, EventArgs e)
         {            
-        }
-
+        }        
         private void mktUserStreet_Leave(object sender, EventArgs e)
         {
             validateMaskedTextBoxLength(mktUserStreet, epvUserStreet, 2, 30);
@@ -551,7 +582,7 @@ namespace SimuladorSegurosResidenciais
         {
             validateMaskedTextBoxLength(mktUserCity, epvUserCity, 2, 30);
         }
-
+        
         private void mktUserStateAcronym_Leave(object sender, EventArgs e)
         {
             if (validateMaskedTextBoxLength(mktUserStateAcronym, epvUserStateAcronym, 2, 2) && Regex.IsMatch(mktUserStateAcronym.Text, @"^[a-zA-Z]{2}$"))
@@ -568,6 +599,63 @@ namespace SimuladorSegurosResidenciais
         private void mktUserNumber_Leave(object sender, EventArgs e)
         {
             validateMaskedTextBoxDigit(mktUserNumber, epvUserNumber, 0, 9999999);
+        }
+
+        public void exitConfirmation(EventArgs e)
+        {            
+            bool hasNoChanged = mktPropertyValue.Text == ""
+                    && mktPropertyGoodsValue.Text == ""
+                    && ckbPropertyHasAlarme.Checked == false
+                    && cbbPropertyCities.SelectedIndex == -1
+                    && cbbPropertyCities.Text == ""
+                    && cbbPropertyStates.SelectedIndex == -1
+                    && cbbPropertyStates.Text == "Selecionar"
+                && mktUserName.Text == ""
+                    && mktUserPhone.Text == ""
+                    && mktUserEmail.Text == ""
+                    && mktUserZipCode.Text == ""
+                    && mktUserStreet.Text == ""
+                    && mktUserNumber.Text == ""
+                    && mktUserNeighborhood.Text == ""
+                    && mktUserCity.Text == ""
+                    && mktUserStateAcronym.Text == ""
+                && ckbInsuranceTheft.Checked == false
+                    && ckbInsuranceDisasters.Checked == false;            
+            if (!hasNoChanged)
+            {
+                var result = MessageBox.Show("Deseja encerrar a aplicação?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    System.Environment.Exit(0);
+                } else
+                {                    
+                    if (e.GetType().ToString() == "System.Windows.Forms.FormClosingEventArgs")
+                    {
+                        ((FormClosingEventArgs)e).Cancel = true;                        
+                    }
+                }
+            } else
+            {
+                System.Environment.Exit(0);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            exitConfirmation(e);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {            
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {            
+            exitConfirmation(e);
+        }
+
+        private void mktUserNumber_Enter(object sender, EventArgs e)
+        {            
         }
     }
 }

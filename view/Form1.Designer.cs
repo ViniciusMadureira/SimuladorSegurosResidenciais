@@ -410,6 +410,7 @@
             this.mktUserNumber.Size = new System.Drawing.Size(236, 21);
             this.mktUserNumber.TabIndex = 10;
             this.mktUserNumber.ValidatingType = typeof(int);
+            this.mktUserNumber.Enter += new System.EventHandler(this.mktUserNumber_Enter);
             this.mktUserNumber.Leave += new System.EventHandler(this.mktUserNumber_Leave);
             // 
             // lblUserNumber
@@ -748,6 +749,7 @@
             this.btnExit.TabIndex = 18;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnClear
             // 
@@ -853,6 +855,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "iSegres";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();
