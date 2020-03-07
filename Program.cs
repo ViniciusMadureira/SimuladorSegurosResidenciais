@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace SimuladorSegurosResidenciais
@@ -14,9 +13,21 @@ namespace SimuladorSegurosResidenciais
         [STAThread]
         static void Main()
         {
+            //try
+            //{
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);                
             Application.Run(new Form1());
+                //var assembly = Assembly.GetExecutingAssembly();
+                //var stream = assembly.GetManifestResourceStream("states.txt");
+                //var fileStream = File.Create(@"C:\states.txt");
+                //stream.Seek(0, SeekOrigin.Begin);
+                //stream.CopyTo(fileStream);
+                //fileStream.Close();
+            //} catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
         }
     }
 }

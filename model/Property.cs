@@ -7,11 +7,14 @@ namespace Classes
         private double value;
         private double goodsValue;
         private bool hasAlarm;
-        public Property(double value, double goodsValue, bool hasAlarm)
+        private City city;
+
+        public Property(double value, double goodsValue, bool hasAlarm, City city)
         {
             setValue(value);
             setGoodsValue(goodsValue);
             setHasAlarme(hasAlarm);
+            setCity(city);
         }
         private void setValue(double value)
         {
@@ -42,6 +45,19 @@ namespace Classes
         public bool getHasAlarme()
         {
             return hasAlarm;
+        }
+
+        private void setCity(City city)
+        {
+            if (city != null)
+            {
+                this.city = city;
+            }
+        }
+
+        public City getCity()
+        {
+            return city;
         }
     }
 }

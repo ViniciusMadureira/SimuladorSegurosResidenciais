@@ -1,14 +1,26 @@
+using System;
+using System.Text.RegularExpressions;
+
 namespace Classes
 {
 	public class User
 	{
 		private string name;
-		private long phone;
+		private Int64 phone;
 		private string email;
+		private City city;
+
+		public User(string name, Int64 phone, string email, City city)
+		{
+			setName(name);
+			setPhone(phone);
+			setEmail(email);
+			setCity(city);
+		}
 
 		protected void setName(string name)
 		{
-			if (name.Length > 2)
+			if (name.Length >= 3 && name.Length <= 80)
 			{
 				this.name = name;
 			}
@@ -19,29 +31,48 @@ namespace Classes
 			return name;
 		}
 
-		public string obterNome()
+		private void setPhone(Int64 phone)
 		{
-			return null;
+			string strPhone = phone.ToString();
+			if (Regex.IsMatch(strPhone, @"^\d+$") && (strPhone.Length == 10 || strPhone.Length == 11))
+			{
+				this.phone = phone;
+			}
 		}
 
-		private void atribuirTelefone(long telefone)
+		public Int64 getPhone()
 		{
-
+			return phone;
 		}
 
-		public long obterTelefone()
+		private void setEmail(string email)
 		{
-			return 0;
+			try
+			{
+				new System.Net.Mail.MailAddress(email);
+				this.email = email;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
 		}
 
-		private void atribuirEmail(string email)
+		public string getEmail()
 		{
-
+			return email;
 		}
 
-		public string obterEmail()
+		private void setCity(City city)
 		{
-			return null;
+			if (city != null)
+			{
+				this.city = city;
+			}
+		}
+		public City getCity()
+		{
+			return city;
 		}
 
 	}
