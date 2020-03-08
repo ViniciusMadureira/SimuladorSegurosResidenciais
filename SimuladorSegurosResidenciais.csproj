@@ -92,7 +92,6 @@
     </Compile>
     <Compile Include="model\City.cs" />
     <Compile Include="model\Insurance.cs" />
-    <Compile Include="model\Address.cs" />
     <Compile Include="model\State.cs" />
     <Compile Include="model\Property.cs" />
     <Compile Include="model\User.cs" />
