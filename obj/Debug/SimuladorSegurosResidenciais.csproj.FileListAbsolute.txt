@@ -17,6 +17,7 @@ C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\RestSharp.dll
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\Newtonsoft.Json.xml
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\bin\Debug\RestSharp.xml
+C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csprojAssemblyReference.cache
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Form1.resources
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.Properties.Resources.resources
 C:\Users\psycom\source\repos\ViniciusMadureira\SimuladorSegurosResidenciais\obj\Debug\SimuladorSegurosResidenciais.csproj.GenerateResource.cache
